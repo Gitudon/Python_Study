@@ -1,0 +1,7 @@
+a = list(map(int, input().split()))
+for i in range(len(a) - 1):
+    for j in range(i, -1, -1):
+        if a[j] < a[j + 1]:
+            break
+        a[j], a[j + 1] = a[j + 1], a[j]
+print(*a)
